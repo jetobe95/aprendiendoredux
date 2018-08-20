@@ -2,34 +2,9 @@ import React from 'react';
 // import AppCounter from "./src/AppCounter";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-
-
-const initialState = {
-  counter: 0,
-}
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "INCREASE":
-      return {
-        counter: state.counter + 1.
-      }
-    case "DECREASE":
-      return {
-        counter: state.counter - 1,
-      }
-    case "LONGPRESS":
-      return {
-        counter: state.counter - 1,
-      }
-
-  }
-  return state;
-
-
-}
-
-const store = createStore(reducer)
-
+import { Text, View } from 'react-native';
+import store from './src/stores/index';
+import TodoApp from './src/TodoApp';
 
 
 export default class App extends React.Component {
@@ -37,12 +12,12 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Provider store={store}> 
-       
-        
+      <Provider store={store}>
+        <TodoApp />
       </Provider>
-
     );
+
+
   }
 }
 
