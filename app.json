@@ -21,7 +21,11 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.Jeff.Jetobe",
       "supportsTablet": true
+    },
+    "android":{
+      "package":"com.Learning.jeffre"
     }
   }
 }
