@@ -9,7 +9,7 @@ class ViewData extends Component{
          <SafeAreaView >
            <Text onPress={()=>this.props.increase()}
            onLongPress={()=>this.props.onLongPress()}
-            style={{fontSize:200,color:this.props.counter<10?"black":this.props.counter>20?"blue":"green"}} >
+            style={{fontSize:70,color:this.props.counter<10?"black":this.props.counter>20?"blue":"green"}} >
                 {this.props.counter}
            </Text>
          </SafeAreaView>

@@ -3,23 +3,30 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { connect } from "react-redux";
 import ViewData from './ViewData';
 class App extends React.Component {
+    static navigationOptions={
+        header:null
+    }
     render() {
         return (
             <View style={ { flex: 1, justifyContent: "space-between", alignItems: "center" } }>
-                <View style={ { width: 300, flexDirection: "row", justifyContent: "space-around" } }>
+                {/* <View style={ { width: 300, flexDirection: "row", justifyContent: "space-around" } } >
 
                     <ViewData />
 
-                </View>
+                </View> */}
 
                 <View style={ styles.container }>
-                    <View style={ { width: 300, flexDirection: "row", justifyContent: "space-around" } }>
+                    <View style={ {  flexDirection: "row", justifyContent: "space-around" } }>
+                       <TouchableOpacity onPress={()=>this.props.navigation.navigate("ViewData")}>
+                           <Text>Click Aqui</Text>
+                       </TouchableOpacity>
+                       
                         <TouchableOpacity
 
                             onPress={ () => this.props.decrease() }>
                             <Text
                                 style={ { fontSize: 20, backgroundColor: "#fafafa" } }
-                            >Decrementar</Text>
+                            >hhhh</Text>
                         </TouchableOpacity>
                         <Text style={ { fontSize: 17, fontWeight: "bold" } }>{ this.props.counter }</Text>
                         <TouchableOpacity
@@ -33,11 +40,11 @@ class App extends React.Component {
 
                     </View>
                 </View>
-                <View style={ { width: 300, flexDirection: "row", justifyContent: "space-around" } }>
+                {/* <View style={ { width: 300, flexDirection: "row", justifyContent: "space-around" } }>
 
                     <ViewData />
 
-                </View>
+                </View> */}
             </View>
         );
     }
